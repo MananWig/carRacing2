@@ -70,9 +70,19 @@ class Game {
         cars[index-1].y = y;
 
         if (index === player.index){
+
+          fill("white");
+         stroke("black");
+         textSize(25);
+         textFont("Algerian")
+          text(allPlayers[plr].name,x-25,y-100);
+          fill("green");
+          circle(x,y,70);
           cars[index - 1].shapeColor = "red";
           camera.position.x = displayWidth/2;
           camera.position.y = cars[index-1].y;
+
+          
         }
        
         //textSize(15);
